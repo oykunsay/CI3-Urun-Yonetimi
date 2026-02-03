@@ -64,18 +64,14 @@ Proje ilişkisel veritabanı mantığıyla tasarlanmıştır. Temel tablolar aş
 ## 🔗 Tablolar Arası İlişkiler
 
 * **products**
-
  * Ana ürün tablosudur. Ürüne ait stok bilgileri, vergi oranı, durum bilgileri, ana görsel, yeni ürün flag’i, taksit ve garanti gibi operasyonel alanlar bu tabloda tutulur. Ürünle ilgili diğer tüm tablolar bu tabloya `product_id` üzerinden bağlanır.
 
 * **products → product_discounts**
   * Ürünlere uygulanabilecek müşteri grubu bazlı veya tarih aralıklı indirimleri tutar. İndirimler tutar veya yüzde bazlı olabilir. Öncelik ve geçerlilik tarihleri sayesinde birden fazla indirim senaryosu desteklenir.
-
-İlişki: `products (1) → product_discounts (N)`
-
+- İlişki: `products (1) → product_discounts (N)`
 
 * **products → product_descriptions**
   * Ürünlerin çoklu dil desteğini sağlamak amacıyla oluşturulmuştur. Her ürün için farklı language_code değerleri ile başlık, açıklama, SEO alanları ve video embed kodu tutulabilir. Bu yapı sayesinde tek bir ürün birden fazla dilde içerik sunabilir.
-
 - İlişki: `products (1) → product_descriptions (N)`
 
 * **products → product_prices**
@@ -83,7 +79,7 @@ Proje ilişkisel veritabanı mantığıyla tasarlanmıştır. Temel tablolar aş
 - İlişki: `products (1) → product_prices (N)`
 
 * **product → product_images**
-  * Ürünlere ait birden fazla görselin yönetilmesini sağlar. `sort_order` alanı ile görsellerin sıralaması kontrol edilir. Ana görsel bilgisi products tablosunda tutulurken, galeri görselleri bu tabloda saklanır.
+  * Ürünlere ait birden fazla görselin yönetilmesini sağlar. `sort_order` alanı ile görsellerin sıralaması kontrol edilir. Ana görsel bilgisi products tablosunda tutulurken, galeri görselleri bu tabloda saklanır.  
 - İlişki: `products (1) → product_images (N)`
 ---
 
