@@ -63,17 +63,28 @@ Proje ilişkisel veritabanı mantığıyla tasarlanmıştır. Temel tablolar aş
 
 ## 🔗 Tablolar Arası İlişkiler
 
-* **products **
+* **products**
 
-  Ana ürün tablosudur. Ürüne ait stok bilgileri, vergi oranı, durum bilgileri, ana görsel, yeni ürün flag’i, taksit ve garanti gibi operasyonel alanlar bu tabloda tutulur. Ürünle ilgili diğer tüm tablolar bu tabloya `product_id` üzerinden bağlanır.
+ * Ana ürün tablosudur. Ürüne ait stok bilgileri, vergi oranı, durum bilgileri, ana görsel, yeni ürün flag’i, taksit ve garanti gibi operasyonel alanlar bu tabloda tutulur. Ürünle ilgili diğer tüm tablolar bu tabloya `product_id` üzerinden bağlanır.
 
 * **products → product_discounts**
+  * Ürünlere uygulanabilecek müşteri grubu bazlı veya tarih aralıklı indirimleri tutar. İndirimler tutar veya yüzde bazlı olabilir. Öncelik ve geçerlilik tarihleri sayesinde birden fazla indirim senaryosu desteklenir.
 
-  * Her ürün için opsiyonel bir indirim tanımlanabilir.
-  * İndirim bilgileri ürün tablosundan ayrılarak daha esnek bir yapı sağlanmıştır.
+İlişki: `products (1) → product_discounts (N)`
 
-Bu ilişkiler, ileride kampanya ve galeri yapılarının genişletilmesine olanak tanıyacak şekilde tasarlanmıştır.
 
+* **products → product_descriptions**
+  * Ürünlerin çoklu dil desteğini sağlamak amacıyla oluşturulmuştur. Her ürün için farklı language_code değerleri ile başlık, açıklama, SEO alanları ve video embed kodu tutulabilir. Bu yapı sayesinde tek bir ürün birden fazla dilde içerik sunabilir.
+
+- İlişki: `products (1) → product_descriptions (N)`
+
+* **products → product_prices**
+  * Ürünlerin para birimi bazlı fiyatlarını tutmak için tasarlanmıştır. Aynı ürün için TL, USD ve EUR gibi farklı para birimlerinde fiyat tanımlanabilir. Ayrıca `price_type` alanı ile birincil ve ikincil satış fiyatları ayrıştırılmıştır.
+- İlişki: `products (1) → product_prices (N)`
+
+* **product → product_images**
+  * Ürünlere ait birden fazla görselin yönetilmesini sağlar. `sort_order` alanı ile görsellerin sıralaması kontrol edilir. Ana görsel bilgisi products tablosunda tutulurken, galeri görselleri bu tabloda saklanır.
+- İlişki: `products (1) → product_images (N)`
 ---
 
 ## 🚀 Kurulum
@@ -94,21 +105,18 @@ Bu ilişkiler, ileride kampanya ve galeri yapılarının genişletilmesine olana
 Proje geliştirmeye açık olacak şekilde tasarlanmıştır. İleride:
 
 * Rol bazlı yetkilendirme sistemi
-* Stok ve sipariş yönetimi
-* API tabanlı mimariye geçiş
-* Frontend için React veya Vue entegrasyonu
+* Ürün detayları için ürün bazlı detay sayfası
+* History tablosu aracılığıyla kimlerin değişiklik yaptığını görebilme
+* Listede arama
+* Ürünler üzerinde filtreleme özellikleri
 * Birim ve entegrasyon testleri
-
+* Hata durumunda eski versiyonlara recover edebilme
+* Resimlerin veritabanından çekilmesi yerine ayrı bir sunucuda tutulması
 eklenebilir.
 
 ---
 
 ## 📌 Sonuç
 
-Bu proje, ürün yönetimi gibi kritik bir iş sürecini sade, anlaşılır ve geliştirilebilir bir mimariyle ele almaktadır. İş teklifine yönelik olarak geliştirilmiş olması sebebiyle, yalnızca çalışan bir sistem değil; **tasarım kararları, varsayımlar ve genişleme potansiyeli** de göz önünde bulundurularak hazırlanmıştır.
+Bu proje ürün yönetimi ve indirimleri gibi kritik bir iş sürecini sade, anlaşılır ve geliştirilebilir bir mimariyle ele almaktadır.
 
----
-
-## 📄 Lisans
-
-Bu proje MIT lisansı ile lisanslanmıştır.
