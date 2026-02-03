@@ -63,7 +63,7 @@ Proje ilişkisel veritabanı mantığıyla tasarlanmıştır. Temel tablolar aş
 
 ## 🔗 Tablolar Arası İlişkiler
 
-### products
+* **products **
 
   Ana ürün tablosudur. Ürüne ait stok bilgileri, vergi oranı, durum bilgileri, ana görsel, yeni ürün flag’i, taksit ve garanti gibi operasyonel alanlar bu tabloda tutulur. Ürünle ilgili diğer tüm tablolar bu tabloya `product_id` üzerinden bağlanır.
 
