@@ -63,7 +63,9 @@ id (PK)
 name
 description
 price
-created_at
+created_at<img width="1928" height="2208" alt="product_db" src="https://github.com/user-attachments/assets/99a479d3-5744-43b0-92cc-82f282c9f3a4" />
+<img width="1928" height="2208" alt="product_db" src="https://github.com/user-attachments/assets/99a479d3-5744-43b0-92cc-82f282c9f3a4" />
+
 updated_at
 
 product_images
