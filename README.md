@@ -55,7 +55,9 @@ Proje geliştirilirken bazı bilinçli varsayımlar yapılmıştır:
 ## 🗄️ Veritabanı Şeması
 
 Proje ilişkisel veritabanı mantığıyla tasarlanmıştır. Temel tablolar aşağıdaki gibidir:
-![alt text](https://github.com/oykunsay/CI3-Urun-Yonetimi/blob/8b64a09c815e77ac1c56e176a81aad1faaec525a/product_db.png)
+<p align="center">
+  <img src="https://github.com/oykunsay/CI3-Urun-Yonetimi/blob/main/product_db.png?raw=true" width="600" alt="Database Schema">
+</p>
 
 ---
 
