@@ -27,6 +27,7 @@ Uygulama, **MVC (Model–View–Controller)** mimarisine uygun olarak geliştiri
 * **Controllers:** İş akışının yönetildiği katman
 * **Models:** Veritabanı işlemlerinin gerçekleştirildiği katman
 * **Views:** Kullanıcı arayüzünün oluşturulduğu katman
+* Okunabilirliği artırmak ve Fat Controller'dan kaçınmak için Model katmanına business logic'i içeren service katmanı eklenmiştir.
 
 Ürün işlemleri 4 ana sekme üzerinden yönetilmektedir:
 
