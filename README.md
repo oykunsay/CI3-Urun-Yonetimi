@@ -31,10 +31,10 @@ Uygulama, **MVC (Model–View–Controller)** mimarisine uygun olarak geliştiri
 
 Ürün işlemleri 4 ana sekme üzerinden yönetilmektedir:
 
-1. **Genel:** Ürün adı, temel bilgiler
-2. **Detaylar:** Açıklama ve ek bilgiler
-3. **Resimler:** Ürüne ait birden fazla görsel yükleme
-4. **İndirim:** Ürüne özel indirim oranı tanımlama
+1. **Genel:** Ürün başlığı, açıklaması, seo adresi, meta başlığı ve video embed kodu
+2. **Detaylar:** Ürüne ait fiyat, vergi oranı, adet, sepet indirim bilgisi, birincil ve ikincil satış fiyatları, sotok durumu, geçerlilik ve garanti süresi bilgileri
+3. **Resimler:** Ürüne ait birden fazla görsel yükleme ve resimlerin görüntülenmesi
+4. **İndirim:** Ürüne ve müşteri türüne özel indirim oranı tanımlama, tarih aralığı girme, öncelik belirleme 
 
 Bu yapı, hem kullanıcı deneyimini iyileştirmek hem de kod tarafında modülerliği artırmak amacıyla tercih edilmiştir.
 
