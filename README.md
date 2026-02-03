@@ -1,8 +1,8 @@
 # 📦 Ürün Yönetim Sistemi (PHP & CodeIgniter 3)
 
-Bu proje, bir e‑ticaret altyapısının en kritik bileşenlerinden biri olan **ürün yönetim sürecini** kapsayan, PHP 7.0+ ve **CodeIgniter 3** kullanılarak geliştirilmiş modüler bir yönetim panelidir. Proje, gerçek bir iş teklifi kapsamında istenen gereksinimlere uygun olacak şekilde tasarlanmış ve uygulanmıştır.
+Bu proje, bir e‑ticaret altyapısının en kritik bileşenlerinden biri olan **ürün yönetim sürecini** kapsayan ve PHP 7.0+ ve **CodeIgniter 3** kullanılarak geliştirilmiş modüler bir yönetim panelidir. 
 
-Amaç, ürünlerin **oluşturulması, düzenlenmesi, listelenmesi**, ürünlere **çoklu görsel eklenmesi** ve **dinamik indirim tanımlanması** gibi süreçleri sade, anlaşılır ve genişletilebilir bir yapı içerisinde sunmaktır.
+Amaç ürünlerin **oluşturulması, düzenlenmesi, listelenmesi**, ürünlere **çoklu görsel eklenmesi** ve **dinamik indirim tanımlanması** gibi süreçleri sade, anlaşılır ve genişletilebilir bir yapı içerisinde sunmaktır.
 
 ---
 
@@ -14,6 +14,7 @@ Bu projenin temel amacı, bir firmanın ürünlerini tek bir merkezden yönetebi
 * Ürünlere birden fazla görsel atanabilmesi
 * İndirim oranlarının esnek şekilde tanımlanabilmesi
 * Yönetim paneli mantığının sade ve anlaşılır olması
+* Ürünlerin ve indirimlerin listenebilmesi
 
 hedeflenmiştir. Proje, gerçek hayat senaryoları göz önünde bulundurularak geliştirilmiştir.
 
@@ -42,13 +43,11 @@ Bu yapı, hem kullanıcı deneyimini iyileştirmek hem de kod tarafında modüle
 
 Proje geliştirilirken bazı bilinçli varsayımlar yapılmıştır:
 
-* Yönetim panelini kullanan kişinin **yetkili bir kullanıcı (admin)** olduğu varsayılmıştır. Bu nedenle rol bazlı yetkilendirme bu sürümde sade tutulmuştur.
+* Yönetim panelini kullanan kişinin **admin** olduğu varsayılmıştır.
 * Ürün ekleme ve düzenleme ekranlarında bulunan sekmelerin tamamı, kullanıcının ürünü adım adım girdiği varsayımıyla tasarlanmıştır.
-* İndirim butonu, ürün fiyatının önceden girilmiş olduğu varsayımına göre çalışacak şekilde kurgulanmıştır.
 * Aynı ürüne birden fazla görsel eklenebileceği varsayılmış ve bu doğrultuda ayrı bir ürün–resim tablosu oluşturulmuştur.
 * Proje kapsamı gereği stok yönetimi ve sipariş süreçleri bilinçli olarak dışarıda bırakılmıştır.
-
-Bu varsayımlar, projenin iş teklifinde belirtilen kapsam içerisinde kalması amacıyla yapılmıştır.
+* İndirim panelinde bulunan **kaldır** işlemi geçerli indirimlerin silinmesi olarak varsayılmıştır.
 
 ---
 
