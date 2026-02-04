@@ -73,6 +73,7 @@ Proje ilişkisel veritabanı mantığıyla tasarlanmıştır. Temel tablolar aş
 
 * **products → product_descriptions**
   * Ürünlerin çoklu dil desteğini sağlamak amacıyla oluşturulmuştur. Her ürün için farklı language_code değerleri ile başlık, açıklama, SEO alanları ve video embed kodu tutulabilir. Bu yapı sayesinde tek bir ürün birden fazla dilde içerik sunabilir.
+  * Veri bütünlüğünü korumak amacıyla, bir ürünün aynı dilde yalnızca bir kaydı bulunabilir; bu durum veritabanı seviyesinde (product_id, language_code) üzerine tanımlanan Composite Unique Index ile garanti altına alınmıştır.
 - İlişki: `products (1) → product_descriptions (N)`
 
 * **products → product_prices**
