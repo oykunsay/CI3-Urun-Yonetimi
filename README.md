@@ -1,4 +1,4 @@
-# 📦 Ürün Yönetim Sistemi (PHP & CodeIgniter 3)
+# 📦 Ürün Yönetim Sistemi (PHP 7.4 & CodeIgniter 3)
 
 Bu proje, bir e‑ticaret altyapısının en kritik bileşenlerinden biri olan **ürün yönetim sürecini** kapsayan ve PHP 7.0+ ve **CodeIgniter 3** kullanılarak geliştirilmiş modüler bir yönetim panelidir. 
 
