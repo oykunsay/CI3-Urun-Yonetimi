@@ -49,6 +49,7 @@ Proje geliştirilirken bazı bilinçli varsayımlar yapılmıştır:
 * Aynı ürüne birden fazla görsel eklenebileceği varsayılmış ve bu doğrultuda ayrı bir ürün–resim tablosu oluşturulmuştur.
 * Proje kapsamı gereği stok yönetimi ve sipariş süreçleri bilinçli olarak dışarıda bırakılmıştır.
 * İndirim panelinde bulunan **kaldır** işlemi geçerli indirimlerin silinmesi olarak varsayılmıştır.
+* Aynı müşteri grubuna farklı tarih aralıklarında birden fazla kampanya tanımlanabilmesi için product_id ve customer_group alanlarında unique constraint uygulanmamıştır.
 
 ---
 
