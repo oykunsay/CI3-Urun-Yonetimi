@@ -92,7 +92,8 @@ class Product extends CI_Controller
 
         $data['product_images'] = $this->Product_model->get_product_images($id);
 
-        $data['product_discounts'] = $this->Product_model->get_product_discounts($id);        $this->load->helper('form');
+        $data['product_discounts'] = $this->Product_model->get_product_discounts($id);
+        $this->load->helper('form');
         $this->load->view('product_form', $data);
 
     }
